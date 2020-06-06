@@ -183,6 +183,9 @@ ls $FONTS_DIR
 cp $FONTS_DIR/* $BUILD_DIR/.fonts/
 fc-cache -f $BUILD_DIR/.fonts
 
+mkdir -p /app/.cache/ms-playwright/firefox-1089/firefox/
+ln -s /app/vendor/firefox/firefox /app/.cache/ms-playwright/firefox-1089/firefox/firefox
+
 # Export the firefox binary location, so it's easier to tell geckodriver
 # about the non-standard location
 export FIREFOX_BIN="\$BUILD_DIR/vendor/firefox/firefox"
