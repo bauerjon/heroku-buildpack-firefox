@@ -188,7 +188,7 @@ mkdir -p $BUILD_DIR/.cache/ms-playwright/firefox-1089/firefox/
 ln -s $BUILD_DIR/vendor/firefox/firefox $BUILD_DIR/.cache/ms-playwright/firefox-1089/firefox/firefox
 
 mkdir -p $BUILD_DIR/browsers/firefox-1089/firefox/
-mv $BUILD_DIR/vendor/firefox/firefox $BUILD_DIR/browsers/firefox-1089/firefox/
+cp $BUILD_DIR/vendor/firefox/* $BUILD_DIR/browsers/firefox-1089/firefox/
 
 # Export the firefox binary location, so it's easier to tell geckodriver
 # about the non-standard location
